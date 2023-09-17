@@ -1,16 +1,16 @@
 import streamlit as st
 st.header('Welcome to BMI Caculator')
-can = st.number_input('Enter your weight(in kilograms)')
-don_vi = st.radio('Select your height format' , options=['Centimeters','Decimeters','Meters'])
+weight = st.number_input('Enter your weight(in kilograms)')
+height_unit = st.radio('Select your height format' , options=['Centimeters','Decimeters','Meters'])
 st.write(f'Write your height in {str(don_vi)}(bigger than 0)')
-chieu_cao = st.number_input('')
+height = st.number_input('')
 BMI = 0
-if don_vi == 'Centimeters':
-    BMI = can / chieu_cao / chieu_cao * 10000
-elif don_vi == 'Decimeters':
-    BMI = can / chieu_cao / chieu_cao * 100
+if height_unit == 'Centimeters':
+    BMI = weight / height / height * 10000
+elif height_unit == 'Decimeters':
+    BMI = weight / height / height * 100
 else:
-    BMI= can / chieu_cao / chieu_cao
+    BMI= weight / height / height
 def Caculate():
     st.write(f'Your BMI Index is {BMI}')
     if BMI < 18.5:
