@@ -2,7 +2,7 @@ import streamlit as st
 st.header('Welcome to BMI Caculator')
 weight = st.number_input('Enter your weight(in kilograms)')
 height_unit = st.radio('Select your height format' , options=['Centimeters','Decimeters','Meters'])
-st.write(f'Write your height in {str(don_vi)}(bigger than 0)')
+st.write(f'Write your height in {str(height_unit)}(bigger than 0)')
 height = st.number_input('')
 BMI = 0
 if height_unit == 'Centimeters':
