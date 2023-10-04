@@ -6,11 +6,11 @@ st.write(f'Write your height in {str(height_unit)}(bigger than 0)')
 height = st.number_input('')
 BMI = 0
 if height_unit == 'Centimeters':
-    BMI = weight / height / height * 10000
+    BMI = weight / (height * height) * 10000
 elif height_unit == 'Decimeters':
-    BMI = weight / height / height * 100
+    BMI = weight / (height * height) * 100
 else:
-    BMI= weight / height / height
+    BMI= weight / (height * height)
 def Caculate():
     st.write(f'Your BMI Index is {BMI}')
     if BMI < 18.5:
